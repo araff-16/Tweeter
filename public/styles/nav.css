@@ -10,6 +10,8 @@
    background-color: #4056A1;
    height: 120px;
    padding: 1.5em;
+   position: absolute;
+   width: 100%;
  }
 
 nav div {
