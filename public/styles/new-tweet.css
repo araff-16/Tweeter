@@ -1,0 +1,31 @@
+.new-tweet{
+  padding: 1.5em;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  font-family: Bungee, sans-serif;
+  color: #FFFFFF;
+  
+}
+
+.new-tweet textarea {
+  width: 100%;
+  outline: none;
+  border: hidden;
+  border-bottom: 4px solid rgb(55, 54, 54);
+  background-color: #f4f1ec;
+  padding: 5px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.new-tweet textarea ::placeholder{
+  font-weight: 600;
+}
+
+
+.new-tweet output {
+  font-family: Bungee, sans-serif;
+  float: right 
+}
