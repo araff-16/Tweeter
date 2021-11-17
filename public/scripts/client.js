@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+//creates an article html element provided necessary tweet info
 const createTweetElement = function(tweetInfo) {
   let tweet = `<article>
     <header>
@@ -18,7 +18,7 @@ const createTweetElement = function(tweetInfo) {
     </header>
     <div class="tweetcontent">
       <p>
-      ${tweetInfo.content.text}
+      ${escape(tweetInfo.content.text)}
       </p>
     </div>
     <footer>
@@ -36,12 +36,20 @@ const createTweetElement = function(tweetInfo) {
   return tweet;
 };
 
+//Loops through all tweets in the datbase an renders them on the page
 const renderTweets = function(tweets) {
   for (let tweetdata of tweets) {
     $('#tweet-container').prepend(createTweetElement(tweetdata));
   }
 };
 
+//Prevents against Cross Site Scripting
+//Ensures user input is only text
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 $(document).ready(function() {
 
