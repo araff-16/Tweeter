@@ -75,4 +75,13 @@ $(document).ready(function () {
 
   renderTweets(data)
 
+  $('#new-tweet').on('submit', (evt) => {
+    evt.preventDefault();
+    
+    const val =$(evt.target.text).serialize()
+    
+    $.post("/tweets/", val)
+
+  })
+
 })

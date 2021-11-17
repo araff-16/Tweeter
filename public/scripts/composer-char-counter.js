@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  console.log('BANANA')
+
 
   $("#tweetinput").on('input',function() {
 
