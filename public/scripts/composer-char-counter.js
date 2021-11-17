@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 
-  $("#tweetinput").on('input',function() {
+  $("#tweet-text").on('input',function() {
 
     //NOTE WE NEED TO USE $(this) to access the jquery methods
     let counter = 140 - $(this).val().length;

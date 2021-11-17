@@ -48,9 +48,22 @@ $(document).ready(function() {
   $('#new-tweet').on('submit', (evt) => {
     evt.preventDefault();
     
+    if (evt.target.text.value === ''){
+      alert("Tweets cannot be an empty string")
+      return 
+    }
+
+    if (evt.target.counter.value < 0){
+      alert("Tweets cannot be greater than 140 characters")
+      return 
+    }
+
     const val = $(evt.target.text).serialize();
     
-    $.post("/tweets/", val);
+    $.post("/tweets/", val).then(()=>{
+      //Resets the field in form
+      $('#new-tweet').trigger("reset");
+    });
 
   });
 
