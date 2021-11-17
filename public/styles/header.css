@@ -1,4 +1,4 @@
-header {
+.main-header {
   height: 400px;
   
   background-color: orange;
@@ -10,15 +10,19 @@ header {
 
 }
 
-header div {
+.main-header div {
   margin: 0
 }
 
-header h2 {
+.main-header h2 {
   margin: 10px;
   color: #FFFFFF;
 }
 
-header img {
+.main-header img {
   width: 215px
+}
+
+.main-header h2 span{
+  font-weight: 300;
 }

@@ -20,12 +20,15 @@
   margin-bottom: 10px;
 }
 
-.new-tweet textarea ::placeholder{
-  font-weight: 600;
+.tweetinput::placeholder{
+  font-weight: 700;
 }
 
 
-.new-tweet output {
+.counter {
   font-family: Bungee, sans-serif;
-  float: right 
+  float: right;
+  color: #545149;
 }
+
+

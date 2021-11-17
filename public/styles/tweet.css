@@ -1,0 +1,55 @@
+#tweet-container  {
+  padding: 1.5em;
+}
+
+#tweet-container article {
+  border: 4px solid rgb(55, 54, 54);
+  padding: 1em;
+}
+
+#tweet-container .tweetcontent {
+  outline: none;
+  border: hidden;
+  border-bottom: 4px solid rgb(55, 54, 54);
+}
+
+#tweet-container footer i {
+  padding: 3px;
+  color: #4056A1; 
+}
+
+#tweet-container footer i:hover {
+  color: rgb(203, 136, 12);
+}
+
+#tweet-container footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+
+#tweet-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tweet-container .name {
+  display: flex;
+  align-items: center;
+}
+
+#tweet-container .username {
+  font-weight: 700;
+  color: rgba(192, 190, 190, 0.872);
+}
+
+#tweet-container .name img{
+  margin-right: 13px;
+}
+
+#tweet-container article:hover{
+  box-shadow: 5px 10px #4056A1;
+}
