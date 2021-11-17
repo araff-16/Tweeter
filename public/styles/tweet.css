@@ -5,6 +5,7 @@
 #tweet-container article {
   border: 4px solid rgb(55, 54, 54);
   padding: 1em;
+  margin-bottom: 45px;
 }
 
 #tweet-container .tweetcontent {
