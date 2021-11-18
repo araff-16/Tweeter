@@ -109,6 +109,22 @@ $(document).ready(function() {
 
   loadTweets();
 
+  $("#navNewTweetBut").on("click", () =>{
+
+    console.log($(".new-tweet").css("display"));
+
+    if ($(".new-tweet").css("display") === "none") {
+      $(".new-tweet").slideDown();
+      return;
+    }
+
+    if ($(".new-tweet").css("display") === "block") {
+      $(".new-tweet").slideUp();
+      return;
+    }
+
+  });
+
 
 
 });
