@@ -55,14 +55,30 @@ $(document).ready(function() {
 
   $('#new-tweet').on('submit', (evt) => {
     evt.preventDefault();
-    
+
+    $("#errorMessage").slideUp();
+
     if (evt.target.text.value === '') {
-      alert("Tweets cannot be an empty string");
+      $("#errorMessage p").text("Tweets cannot be an empty string!");
+      $("#errorMessage").slideDown({
+        start: function() {
+          $(this).css({
+            display: "flex"
+          });
+        }
+      });
       return;
     }
 
     if (evt.target.counter.value < 0) {
-      alert("Tweets cannot be greater than 140 characters");
+      $("#errorMessage p").text("Tweets cannot be greater than 140 characters!");
+      $("#errorMessage").slideDown({
+        start: function() {
+          $(this).css({
+            display: "flex"
+          });
+        }
+      });
       return;
     }
 
