@@ -1,6 +1,5 @@
 .main-header {
   height: 400px;
-  
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
   display:flex;
@@ -25,4 +24,15 @@
 
 .main-header h2 span{
   font-weight: 300;
+}
+
+@media only screen and (min-width: 900px) {
+
+  .main-header{
+    height: 325px;
+    width: 450px;
+    margin: 45px;
+    justify-content: center;
+    border-radius: 20px;
+  }
 }

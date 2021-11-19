@@ -32,7 +32,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="navbarcol">
       
       <span>tweeter</span>
       
@@ -43,36 +43,39 @@
       
     </nav>
 
-    <header class="main-header">
-      <div>
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-        <h2>Amy <span>Mansell</span></h2>
-      </div>
-    </header>
+    <div class = body-main-container>
 
-
-    <main>
-      <section class="new-tweet">
-        <div id="errorMessage">
-          <i class="fas fa-exclamation-triangle"></i>
-          <p>THIS TWEET IS TO LONG </p>
-          <i class="fas fa-exclamation-triangle"></i>
+      <header class="main-header">
+        <div>
+          <img src="/images/profile-hex.png"> 
         </div>
-        <form id="new-tweet" method="post" action=/tweets>
-          <textarea class="tweetinput" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <div>
+          <h2>Amy <span>Mansell</span></h2>
+        </div>
+      </header>
+
+
+      <main>
+        <section class="new-tweet">
+          <div id="errorMessage">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>THIS TWEET IS TO LONG </p>
+            <i class="fas fa-exclamation-triangle"></i>
           </div>
-        </form>
-      </section>
+          <form id="new-tweet" method="post" action=/tweets>
+            <textarea class="tweetinput" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
-      <section id=tweet-container></section>
+        <section id=tweet-container></section>
 
-    </main>
+      </main>
 
+    </div>
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
   </body>

@@ -88,6 +88,7 @@ $(document).ready(function() {
       
       //Resets the field in form
       $('#new-tweet').trigger("reset");
+      $('.counter').val('140')
 
       //Make new AJAX to load new tweet
       $.get("/tweets").then(data => {
@@ -124,7 +125,5 @@ $(document).ready(function() {
     }
 
   });
-
-
 
 });
