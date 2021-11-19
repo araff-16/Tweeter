@@ -33,18 +33,14 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbarcol">
-      
       <span>tweeter</span>
-      
       <div>
         <button id="navNewTweetBut">Write a new tweet</button>
         <i class="fas fa-angle-double-down"></i>
       </div>
-      
     </nav>
 
-    <div class = body-main-container>
-
+    <div class="body-main-container">
       <header class="main-header">
         <div>
           <img src="/images/profile-hex.png"> 
@@ -62,7 +58,7 @@
             <p>THIS TWEET IS TO LONG </p>
             <i class="fas fa-exclamation-triangle"></i>
           </div>
-          <form id="new-tweet" method="post" action=/tweets>
+          <form id="new-tweet" method="post" action="/tweets">
             <textarea class="tweetinput" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
             <div>
               <button type="submit">Tweet</button>
@@ -71,8 +67,8 @@
           </form>
         </section>
 
-        <section id=tweet-container></section>
-
+        <!--Tweets to be rendered into section below-->
+        <section id="tweet-container"></section>
       </main>
 
     </div>

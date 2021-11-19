@@ -53,11 +53,15 @@ const escape = function(str) {
 
 $(document).ready(function() {
 
+  //Event listener for new tweet button
   $('#new-tweet').on('submit', (evt) => {
+    //Prevents default behaviour of event
     evt.preventDefault();
 
+    //If there is an error message present it will slide up
     $("#errorMessage").slideUp();
 
+    //Check to see if the tweet is empty
     if (evt.target.text.value === '') {
       $("#errorMessage p").text("Tweets cannot be an empty string!");
       $("#errorMessage").slideDown({
@@ -70,6 +74,7 @@ $(document).ready(function() {
       return;
     }
 
+    //Check to see if the tweet exceeds 140 chars
     if (evt.target.counter.value < 0) {
       $("#errorMessage p").text("Tweets cannot be greater than 140 characters!");
       $("#errorMessage").slideDown({
@@ -82,15 +87,17 @@ $(document).ready(function() {
       return;
     }
 
+    //Gets tweet text from form input and serializes
     const val = $(evt.target.text).serialize();
     
+    //AJAX POST request
     $.post("/tweets/", val).then(()=>{
       
       //Resets the field in form
       $('#new-tweet').trigger("reset");
-      $('.counter').val('140')
+      $('.counter').val('140');
 
-      //Make new AJAX to load new tweet
+      //New AJAX to load new tweet
       $.get("/tweets").then(data => {
         let newTweet = data[data.length - 1];
         $('#tweet-container').prepend(createTweetElement(newTweet));
@@ -100,19 +107,17 @@ $(document).ready(function() {
 
   });
 
+  //Renders tweets from database on the page
   const loadTweets = function() {
-
     $.get("/tweets").then(data => {
       renderTweets(data);
     });
-
   };
 
   loadTweets();
 
   $("#navNewTweetBut").on("click", () =>{
 
-    console.log($(".new-tweet").css("display"));
 
     if ($(".new-tweet").css("display") === "none") {
       $(".new-tweet").slideDown();

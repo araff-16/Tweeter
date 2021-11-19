@@ -6,7 +6,6 @@
   background-color: #4056A1;
   font-family: Bungee, sans-serif;
   color: #FFFFFF;
-  
 }
 
 .new-tweet textarea {
@@ -23,7 +22,6 @@
 .tweetinput::placeholder{
   font-weight: 700;
 }
-
 
 .counter {
   font-family: Bungee, sans-serif;

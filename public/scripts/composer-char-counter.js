@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
 
-
   $("#tweet-text").on('input',function() {
 
     //NOTE WE NEED TO USE $(this) to access the jquery methods
