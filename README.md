@@ -5,8 +5,10 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
+Desktop Display Version
 !["Desktop Display Version"](docs/Desktop.png)
 
+Mobile Display Version
 !["Mobile Display Version"](docs/Mobile.png)
 
 ## Dependencies
