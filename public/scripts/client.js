@@ -116,11 +116,12 @@ $(document).ready(function() {
 
   loadTweets();
 
+  //LOGIC FOR BUTTON IN NAV
   $("#navNewTweetBut").on("click", () =>{
-
 
     if ($(".new-tweet").css("display") === "none") {
       $(".new-tweet").slideDown();
+      $("#tweet-text").focus()
       return;
     }
 
@@ -128,7 +129,26 @@ $(document).ready(function() {
       $(".new-tweet").slideUp();
       return;
     }
-
   });
+
+  //SCROLL LOGIC FOR FIXED BUTTON AT BOTTOM OF SCREEN
+  $(window).on("scroll", ()=> {
+
+    let scrollPos = $(window).scrollTop();
+    
+    if (scrollPos <= 75) {
+        $("#returnToTop").css("visibility", "hidden" );
+    } else {
+        $("#returnToTop").css("visibility", "visible" );
+    }
+  })
+
+  //ONCLICK LOGIC FOR FIXED BUTTON AT BOTTOM OF SCREEN
+  $("#returnToTop button").on("click", () =>{
+
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  
+  });
+
 
 });

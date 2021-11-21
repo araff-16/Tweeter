@@ -41,6 +41,8 @@
     </nav>
 
     <div class="body-main-container">
+
+      <!--header containing picture of user and name-->
       <header class="main-header">
         <div>
           <img src="/images/profile-hex.png"> 
@@ -50,8 +52,9 @@
         </div>
       </header>
 
-
+      <!-- main area of the body containing tweets and form input-->
       <main>
+        <!--form input for new tweets-->
         <section class="new-tweet">
           <div id="errorMessage">
             <i class="fas fa-exclamation-triangle"></i>
@@ -69,10 +72,16 @@
 
         <!--Tweets to be rendered into section below-->
         <section id="tweet-container"></section>
+        
+        <!--Tweets to be rendered into section below-->
+      
       </main>
-
+      
     </div>
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+
+    <div id = "returnToTop">
+      <button><i class="fas fa-angle-double-up"></i></button>
+    </div>
+
   </body>
 </html>
